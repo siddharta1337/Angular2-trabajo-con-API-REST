@@ -1,0 +1,28 @@
+<div *ngIf="!error">
+
+
+<ul class="list-unstyled" *ngIf="tareas && tareas.length > 0 " >
+
+  <li *ngFor="let item of tareas"> 
+
+      <app-tarea-individual [tareaInfo]="item" (cambioTarea)="actualizar()" > </app-tarea-individual>
+
+  </li>
+
+</ul>
+
+<div *ngIf="!tareas || tareas.length <= 0 " >
+  <h1>
+  Lista vacía
+  </h1>
+</div>
+
+<input type="text" [(ngModel)]="modeloItem.nuevoNombre" >
+  <button (click)="crearRegistro()" > GUARDAR  </button>
+
+</div>
+
+ <div *ngIf="error"  class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only"></span> Error: Aplicación no disponible
+  </div>
