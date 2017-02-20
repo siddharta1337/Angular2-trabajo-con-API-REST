@@ -1,4 +1,4 @@
-# Angular práctico: Administrador de archivos
+# Angular práctico: Trabajo con API REST
 
 Comprende cómo funciona una API (interfaz de programación de aplicaciones) y cómo controlarla desde Angular, uno de los framework JavaScript más utilizados y respetados del mundo. Aprende en este curso usando una aplicación real que puedes utilizar como base para tus proyectos personales utilizando Angular 2, famoso en gran parte debido a su facilidad de integración con APIs.
 
