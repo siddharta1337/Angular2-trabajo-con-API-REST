@@ -5,9 +5,9 @@
   "author": "Carlos Solis",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.1",
+    "cors": "^2.8.5",
     "express": "~3.x",
-    "mongoose": "^4.8.3",
-    "nodemon": "^1.11.0"
+    "mongoose": "^5.9.21",
+    "nodemon": "^2.0.4"
   }
 }

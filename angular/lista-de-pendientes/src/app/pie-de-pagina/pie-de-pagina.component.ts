@@ -9,7 +9,7 @@ export class PieDePaginaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

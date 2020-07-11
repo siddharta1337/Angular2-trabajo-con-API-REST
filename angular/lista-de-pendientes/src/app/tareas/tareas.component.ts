@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-tareas',
@@ -8,47 +8,37 @@ import { Http, Response } from '@angular/http';
 })
 export class TareasComponent implements OnInit {
 
-  constructor(private http: Http) { }
+  tareas;
+  error;
 
+  constructor(private http: HttpClient) { }
 
-  tareas: Array<Object>;
-  modeloItem: any;
-  error: any;
-
-  ngOnInit() {
-    this.modeloItem = {};
+  ngOnInit(): void {
     this.peticionExterna();
   }
 
-  actualizar():void{
+  actualizar(): void {
     this.peticionExterna();
   }
 
   peticionExterna(): void {
-
-    this.http.request('http://localhost:8080/api/lista')
+    this.http.get('http://localhost:8080/api/lista')
       .subscribe(
-        (respuesta: Response) =>  this.tareas = respuesta.json() ,
-        ( error:Response ) => this.error = error
+        (respuesta) => this.tareas = respuesta,
+        (error) => this.error = error
+
       )
+  }
 
+  crearRegistro(nuevoNombre) {
+
+    var parametros = { texto: nuevoNombre.value };
+
+    this.http.post('http://localhost:8080/api/lista', parametros).subscribe(respuesta => {
+      this.peticionExterna();
+    })
   }
 
 
-  crearRegistro():void{
 
-      var parametros = { texto: this.modeloItem.nuevoNombre };
-
-     this.http.post('http://localhost:8080/api/lista' , parametros)
-      .subscribe((respuesta: Response) => {
-
-          this.peticionExterna();
-        
-      })
-
-  }
-
-  
-
-  
 }
