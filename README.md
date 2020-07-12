@@ -32,5 +32,5 @@ Tambien, recuerda tener funcionando el servidor de MongoDB y el servidor node en
 
 Puedes contactarme en mis redes sociales
 
-Facebook: https://www.facebook.com/carlos.solis1337
-Youtube: www.youtube.com/user/RevolucionMobi?
+- Facebook: https://www.facebook.com/carlos.solis1337
+- Youtube: www.youtube.com/user/RevolucionMobi?
