@@ -26,6 +26,7 @@ Tambien, recuerda tener funcionando el servidor de MongoDB y el servidor node en
 ### Descripción de carpetas
 - *angular/lista-de-pendientes* contiene el código fuente del proyecto Angular 2
 - *node* contiene los archivos para ejecutar el servidor REST que alimenta el proyecto Angular 2
+- *proyecto finalizado para distribuir/lista-de-pendientes* contiene el proyecto terminado y optimizado para web.
 
 ## Más información
 
